@@ -25,24 +25,23 @@ class Users extends React.Component{
                 this.state.users.length > 0 ? 
                 <div> 
                     <table>
-                        <tr>
-                            <th>UserId</th>
-                            <th>ID</th>
-                            <th>Title</th>
-                            <th>Completed</th>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                            </tr>
+                        </thead>
                         <thead>
                             {
                                 this.state.users.map((user)=>{
-                                    return <tr>
-                                                <td>{this.users.userId}</td>
-                                                <td>{this.users.id}</td>
-                                                <td>{this.users.title}</td>
-                                                <td>{this.users.completed}</td>
+                                    return <tr key = {user.id}>
+                                                <td>{user.id}</td>
+                                                <td>{user.title}</td>
                                             </tr>
                                 })
                             }
                         </thead>
+                        
                     </table>
                 </div> : <div> <h3>No Data</h3> </div>
             }
