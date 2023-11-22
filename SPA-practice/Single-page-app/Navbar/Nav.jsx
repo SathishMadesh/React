@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Home from '../Components/Home'
 
 class Nav extends React.Component{
 
