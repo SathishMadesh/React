@@ -1,18 +1,21 @@
  
 import {GM,GN} from './msg.action'
 
-let initialstate = {
+let initialState = {
     msg : "Hello..."
 }
 
-let messageReducer = (state=initialstate,action) => {
+let messageReducer = (state=initialState,action) => {
+    console.log("current State", state)
     console.log(action.type)
     switch (action.type) {
-        case GM:
-            return {msg:"Good Morning"}
-        case GN:
+        case 'GM':
+            return {msg : "Good Morning"}
+        case 'GN':
             return {msg:"Good Night"}
+        default:
+            return state;
     }
 }
 
-export default messageReducer
+export {messageReducer , initialState}

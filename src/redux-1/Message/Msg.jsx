@@ -1,6 +1,6 @@
-import React from "react"
+import React, {useState} from "react";
 
-import { useDispatch , useSelector} from "react-redux"
+import { useDispatch,useSelector } from "react-redux"
 
 import { gmAction, gnAction } from "../redux/message/msg.action"
 

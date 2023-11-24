@@ -6,11 +6,11 @@ import { store } from "./redux-1/redux/store";
 class App extends React.Component{
 
     render (){
-        return <div>
-            <Provider store={store}>
+        return <Provider store={store}>
+             <div>
                 <Message/>
-            </Provider>
-        </div>
+            </div>
+        </Provider>
     }
 }
 
