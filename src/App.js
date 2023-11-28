@@ -22,6 +22,8 @@ class App extends React.Component{
                     <Route path='Contact' element={<Contact/>}/>
                 </Routes>
             </Router>
+            <Home />
+            <Products />
         </div>
     }
 }
