@@ -1,29 +1,24 @@
 import React from "react";
-import Nav from "./shophere/Navbar/Nav";
-import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
+import Navbar from "./navbar/Navbar"
+import { BrowserRouter as Router, Routes , Route  } from "react-router-dom";
 
-import Home from "./shophere/Components/Home";
-import Products from "./shophere/Components/Products";
-import About from "./shophere/Components/About";
-import Cart from "./shophere/Components/Cart";
-import Contact from "./shophere/Components/Contact";
+import Home from "./components/Home";
+import About from "./components/About";
+import Users from "./components/Users";
+
 
 class App extends React.Component{
 
     render(){
         return <div>
             <Router>
-                <Nav />
+                <Navbar />
                 <Routes>
-                    <Route path='Home' element={<Home/>}/>
-                    <Route path='Products' element={<Products/>}/>
-                    <Route path='About' element={<About/>}/>
-                    <Route path='Cart' element={<Cart/>}/>
-                    <Route path='Contact' element={<Contact/>}/>
+                    <Route path="Home" element={<Home/>}/>
+                    <Route path="About" element={<About/>}/>
+                    <Route path="Users" element={<Users/>}/>
                 </Routes>
             </Router>
-            <Home />
-            <Products />
         </div>
     }
 }
