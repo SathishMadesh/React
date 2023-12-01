@@ -10,7 +10,8 @@ class Navbar extends React.Component{
             <div className="ml-auto">
                 <ul className="navbar-nav">
                     <li><Link to="Home" className="nav-link">Home</Link></li>
-                    <li><Link to="Admin" className="nav-link">Admin</Link></li>
+                    <li><Link to="About" className="nav-link">About</Link></li>
+                    <li><Link to="Users" className="nav-link">Users</Link></li>
                 </ul>
             </div>
         </nav>

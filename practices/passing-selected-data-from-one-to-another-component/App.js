@@ -3,7 +3,9 @@ import Navbar from "./navbar/Navbar"
 import { BrowserRouter as Router, Routes , Route  } from "react-router-dom";
 
 import Home from "./components/Home";
-import Admin from "./components/Admin";
+import About from "./components/About";
+import Users from "./components/Users";
+
 
 class App extends React.Component{
 
@@ -13,7 +15,8 @@ class App extends React.Component{
                 <Navbar />
                 <Routes>
                     <Route path="Home" element={<Home/>}/>
-                    <Route path="Admin" element={<Admin/>}/>
+                    <Route path="About" element={<About/>}/>
+                    <Route path="Users" element={<Users/>}/>
                 </Routes>
             </Router>
         </div>
