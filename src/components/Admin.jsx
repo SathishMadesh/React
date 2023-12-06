@@ -50,25 +50,29 @@ let Admin = () => {
 
     return <div>
         <pre>{JSON.stringify(product)}</pre>
-        <form onSubmit={submitHandler}>
-            <div className="form-group">
-                <input type="text" placeholder="Product Name" name="name" onChange={updateHandler} className="form-control"/>
-            </div>
-            <div className="form-group">
-                <input type="text" placeholder="Product Discription" name="discription" onChange={updateHandler} className="form-control"/>
-            </div>
-            <div className="form-group">
-                <input type="file" placeholder="Image" name="imgurl" onChange={imgHandler} className="form-control"/>
-            </div>
-            <div className="form-group">
-                <input type="text" placeholder="Price" name="price" onChange={updateHandler} className="form-control"/>
-            </div>
-            <div className="form-group">
-                <input type="text" placeholder="QTY" name="quantity" onChange={updateHandler} className="form-control"/>
-            </div>
+        <div className="row">
+            <div className="col-lg-10">
+                <form onSubmit={submitHandler}>
+                    <div className="form-group">
+                        <input type="text" placeholder="Product Name" name="name" onChange={updateHandler} className="form-control"/>
+                    </div>
+                    <div className="form-group">
+                        <input type="text" placeholder="Product Discription" name="discription" onChange={updateHandler} className="form-control"/>
+                    </div>
+                    <div className="form-group">
+                        <input type="file" placeholder="Image" name="imgurl" onChange={imgHandler} className="form-control"/>
+                    </div>
+                    <div className="form-group">
+                        <input type="text" placeholder="Price" name="price" onChange={updateHandler} className="form-control"/>
+                    </div>
+                    <div className="form-group">
+                        <input type="text" placeholder="QTY" name="quantity" onChange={updateHandler} className="form-control"/>
+                    </div>
 
-            <input type='submit' value="upload" className='btn btn-warning'/>
-        </form>
+                    <input type='submit' value="upload" className='btn btn-warning'/>
+                </form>
+            </div>
+        </div>
     </div>
 }
 export default Admin
