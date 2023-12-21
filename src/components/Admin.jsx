@@ -36,7 +36,7 @@ let Admin = () => {
 
     let submitHandler = (event) => {
         event.preventDefault();
-        Axios.post('http://127.0.0.1:8000/products/',{product},{headers:{
+        Axios.post(`http://127.0.0.1:8000/products/`,{product},{headers:{
             'Content-Type': 'application/json',
             'x-csrftoken': 'your-csrf-token',
           }})
