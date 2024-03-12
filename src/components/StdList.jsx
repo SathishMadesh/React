@@ -1,9 +1,11 @@
 import React from 'react'
 
-function StdList() {
+function StdList(props) {
   return (
     <div>
-      
+      <ul>
+        <li>{props.displayStd}</li>
+      </ul>
     </div>
   )
 }
