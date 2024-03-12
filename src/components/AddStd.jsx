@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AddStd.css';
 
 function AddStd() {
+
+  const [stdName, setStdName] = useState();
+  
   return (
     <>
       <div className="container">
