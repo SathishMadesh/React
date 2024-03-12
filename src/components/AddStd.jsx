@@ -9,7 +9,7 @@ function AddStd() {
           <h1>Add New Student</h1>
           <input type="text" />
           <button>Add</button>
-        </div> 
+        </div>
       </div>
     </>
   )
