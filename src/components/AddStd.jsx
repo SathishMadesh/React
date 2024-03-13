@@ -5,14 +5,17 @@ import StdList from './StdList';
 function AddStd() {
 
   const [stdName, setStdName] = useState('');
-  const [displayStd, setDisplayStd] = useState('');
+  const [stdList, setStdList] = useState([]);
 
   const handleChange = (event) => {
     setStdName(event.target.value);
   }
 
   const handleAdd = () => {
-    setDisplayStd(stdName);
+    if(stdName.trim() !== ''){
+      setStdList([...stdList, stdName]);
+      setStdName('');
+    }
   }
 
   return (
@@ -22,7 +25,7 @@ function AddStd() {
           <h1>Add New Student</h1>
           <input type="text" value={stdName} onChange={handleChange}/>
           <button onClick={handleAdd}>Add</button>
-          <StdList displayStd={displayStd}/>
+          <StdList stdList={stdList}/>
         </div>
       </div>
     </>

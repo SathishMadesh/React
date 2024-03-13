@@ -4,7 +4,9 @@ function StdList(props) {
   return (
     <div>
       <ul>
-        <li>{props.displayStd}</li>
+        {props.stdList.map((stdName, index) => (
+          <li key={index}>{stdName}</li>
+        ))}
       </ul>
     </div>
   )
