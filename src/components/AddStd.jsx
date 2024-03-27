@@ -6,7 +6,7 @@ function AddStd() {
   const [stdName, setStdName] = useState('');
   const [stdList, setStdList] = useState([]);
   const [checked, setChecked] = useState(false);
-  const [updatedStdList, setUpdatedStdList] = useState(stdList);
+  const [updatedStdList, setUpdatedStdList] = useState([stdList]);
 
   const handleChange = (event) => {
     setStdName(event.target.value);
@@ -22,8 +22,8 @@ function AddStd() {
   const handleCheck = (event) => {
     setChecked(event.target.checked);
   }
-  const handleDelete =(index) = {
-    
+  const handleDelete =(index) => {
+    setUpdatedStdList(...stdList, updatedStdList.filter((i)=>( i !== index)))
   }
 
   return (
@@ -40,7 +40,7 @@ function AddStd() {
               <li key={index}><input type="checkBox" onChange={handleCheck}/>{std}
               <div>
                 {console.log(checked)}
-                {checked ?(<button onClick={(i)=>handleDelete(index)}> Delete </button>) : null }
+                {checked ?(<button onClick={()=>handleDelete(index)}> Delete </button>) : null }
               </div>
               </li>
             ))}
