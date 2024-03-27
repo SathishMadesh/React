@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './AddStd.css';
-import StdList from './StdList';
 
 function AddStd() {
 
   const [stdName, setStdName] = useState('');
   const [stdList, setStdList] = useState([]);
+  const [checked, setChecked] = useState(false);
+  const [updatedStdList, setUpdatedStdList] = useState(stdList);
 
   const handleChange = (event) => {
     setStdName(event.target.value);
@@ -18,6 +19,13 @@ function AddStd() {
     }
   }
 
+  const handleCheck = (event) => {
+    setChecked(event.target.checked);
+  }
+  const handleDelete =(index) = {
+    
+  }
+
   return (
     <>
       <div className="container">
@@ -25,7 +33,18 @@ function AddStd() {
           <h1>Add New Student</h1>
           <input type="text" value={stdName} onChange={handleChange}/>
           <button onClick={handleAdd}>Add</button>
-          <StdList stdList={stdList}/>
+        </div>
+        <div className="std-list">
+          <ul>
+            {stdList.map((std,index)=>(
+              <li key={index}><input type="checkBox" onChange={handleCheck}/>{std}
+              <div>
+                {console.log(checked)}
+                {checked ?(<button onClick={(i)=>handleDelete(index)}> Delete </button>) : null }
+              </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </>
