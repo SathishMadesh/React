@@ -2,17 +2,20 @@ import React, { useState } from 'react';
 
 function StdList(props) {
 
-  const [newList, setNewList] = 
+  // const [list, setList] = useState(props.StdList);
+  // const [newList, setNewList] = useState([props.StdList]);
 
-  const deleteHandler = (index) => {
-
-  }
+  // const deleteHandler = (index) => {
+  //   newList.filer((std)=>{
+  //     setNewList(std !== index)
+  //   });
+  // }
 
   return (
     <div>
       <ul>
-        {props.stdList.map((stdName, index) => (
-          <li key={index}>{stdName} <button onClick={()=>{deleteHandler(index)}}>Delete</button> </li>
+        {props.StdList.map((stdName, index) => (
+          <li key={index}>{stdName} </li>
         ))}
       </ul>
     </div>
